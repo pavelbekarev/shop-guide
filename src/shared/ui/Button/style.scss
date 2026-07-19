@@ -1,0 +1,22 @@
+.button {
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 27rem;
+  padding: 13px 0px;
+
+  border-radius: 5px;
+  border: 2px solid #fff;
+  background-color: transparent;
+
+  span {
+    text-transform: uppercase;
+    font-family: var(--fontMontserrat);
+    letter-spacing: 0%;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    color: #fff;
+  }
+}

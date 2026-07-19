@@ -1,0 +1,25 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 2.75rem;
+  z-index: 1;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__socials {
+    display: flex;
+    flex-flow: row;
+    gap: 1.25rem;
+  }
+}
