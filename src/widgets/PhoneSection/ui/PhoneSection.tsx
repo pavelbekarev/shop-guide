@@ -1,6 +1,6 @@
 import "../style.scss"
 import { phoneSectionMocks } from "../model/mock"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Swiper as SwiperType } from "swiper";
 import { Phone } from "./Phone";
 
