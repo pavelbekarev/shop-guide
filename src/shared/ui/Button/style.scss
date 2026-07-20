@@ -5,10 +5,13 @@
   align-items: center;
   min-width: 27rem;
   padding: 13px 0px;
-
   border-radius: 5px;
   border: 2px solid #fff;
   background-color: transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease-in,
+    backdrop-filter 0.3s ease;
 
   span {
     text-transform: uppercase;
@@ -18,5 +21,10 @@
     font-size: 15px;
     line-height: 16px;
     color: #fff;
+  }
+
+  &:hover {
+    background-color: transparent;
+    backdrop-filter: blur(30px);
   }
 }

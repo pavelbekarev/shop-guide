@@ -1,3 +1,4 @@
+import Button from "#shared/ui/Button"
 import CustomSwiper from "#shared/ui/CustomSwiper"
 import { defaultBreakpoints } from "#shared/ui/CustomSwiper/model/defaultBreakpoints"
 import "../style.scss"
@@ -69,7 +70,10 @@ export function Partners() {
             <div className="partners__ctaWrapper">
                 <p className="partners__ctaText">Хотите стать партнёром?</p>
                 <p className="partners__ctaText">Напишите нам и про ваши акции узнают все.</p>
-                <button className="partners__ctaButton">Стать партнером</button>
+                <Button
+                    text="Стать партнером"
+                    classnames={['partners__ctaButton']}
+                />
             </div>
 
         </section>
