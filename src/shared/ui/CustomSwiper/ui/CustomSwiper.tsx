@@ -8,7 +8,6 @@ import 'swiper/css/scrollbar'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, A11y, Navigation } from 'swiper/modules';
 import type { CustomSwiperProps } from "../model/types"
-import { defaultBreakpoints } from "../model/defaultBreakpoints"
 import type { SwiperModule } from "swiper/types"
 
 export default function CustomSwiper<T>({ swiperConfig, renderSlide, children, swiperProps }: CustomSwiperProps<T>) {
@@ -21,6 +20,8 @@ export default function CustomSwiper<T>({ swiperConfig, renderSlide, children, s
     if (swiperConfig?.slides)
         return (
             <Swiper
+            onSwiper={() => console.log("Swiper init")}
+    onSlideChange={() => console.log("Slide changed")}
                 modules={modules}
                 className='customSwiper'
                 slidesPerView={swiperConfig?.slidesPerView || 3}
@@ -28,11 +29,10 @@ export default function CustomSwiper<T>({ swiperConfig, renderSlide, children, s
                 autoplay={
                     swiperConfig?.autoPlay ? swiperConfig?.autoPlay || defaultAutoplayConfig : false
                 }
-                breakpoints={swiperConfig?.breakpoints || defaultBreakpoints}
-                spaceBetween={swiperConfig?.spaceBetween || 20} 
-                loop
+                breakpoints={swiperConfig?.breakpoints}
+                spaceBetween={swiperConfig?.spaceBetween} 
+                loop={swiperConfig?.loop ?? false}
                 draggable={false}
-                navigation={swiperConfig?.navigation}
                 {...swiperProps}
             >
                 {
