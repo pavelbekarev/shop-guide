@@ -1,7 +1,7 @@
 .banner {
   position: relative;
   min-height: 810px;
-  background: url(/public/assets/bannerBg.png) center/cover;
+  background: url(/assets/bannerBg.png) center/cover;
 
   @media (max-width: 390px) {
     min-height: 709px;
@@ -71,7 +71,7 @@
       left: 0;
       width: 14px;
       height: 12px;
-      background: url("/public/assets/polygon.svg") center/cover;
+      background: url("/assets/polygon.svg") center/cover;
     }
   }
 

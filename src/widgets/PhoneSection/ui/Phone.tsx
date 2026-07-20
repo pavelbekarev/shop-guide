@@ -25,7 +25,7 @@ export function Phone({ onSwiper, onSlideChange, screens }: PhoneProps) {
                     swiperConfig={{ slides: screens }} 
                     swiperProps={{ 
                         onSwiper: onSwiper, 
-                        onSlideChange: onSlideChange 
+                        onSlideChange: onSlideChange,
                     }} 
                 />
             </div>
