@@ -1,4 +1,5 @@
 import CustomSwiper from "#shared/ui/CustomSwiper"
+import { defaultBreakpoints } from "#shared/ui/CustomSwiper/model/defaultBreakpoints"
 import "../style.scss"
 
 export function Partners() {
@@ -34,36 +35,33 @@ export function Partners() {
     ]
     return (
         <section className="partners">
-            <h2 className="partners__title">Наши партнеры</h2>
+            <h2 className="partners__title">Наши партнёры</h2>
             <div className="partners__wrapper">
-                <div className="container partners__swiperContainer">
-                    {/* {
-                        partners.map((item) => (
-                            <img className="partners__img" key={item.id} src={item.logo} alt="Логотип партнера" />
-                        ))
-                    } */}
-
-                    <div className="partners__swiper">
-                        <button className="partners-prev-button"></button>
-                        <CustomSwiper
-                            renderSlide={(slide) => (
-                                <img className="partners__img" key={slide?.id} src={slide?.logo} alt="Логотип партнера" />
-                            )}
-                            swiperConfig={{
-                                slides: partners,
+                <div className="container">
+                    <div className="partners__swiperContainer">
+                        <div className="partners__swiper">
+                            <button className="partners-prev-button"></button>
+                            <CustomSwiper
+                                renderSlide={(slide) => (
+                                    <img className="partners__img" key={slide?.id} src={slide?.logo} alt="Логотип партнера" />
+                                )}
+                                swiperConfig={{
+                                    slides: partners,
+                                    slidesPerView: 7,
+                                    spaceBetween: 0,
+                                    breakpoints: defaultBreakpoints
+                                }}
+                                swiperProps={{
+                                    watchOverflow: true,
+                                    navigation: {
+                                        prevEl: ".partners-prev-button",
+                                        nextEl: ".partners-next-button",
+                                    },
+                                }}
                                 
-                                slidesPerView: 7,
-                                spaceBetween: 0
-                            }}
-                            swiperProps={{
-                                watchOverflow: true,
-                                navigation: {
-                                    prevEl: ".partners-prev-button",
-                                    nextEl: ".partners-next-button"
-                                },
-                            }}
-                        />
-                        <button className="partners-next-button"></button>
+                            />
+                            <button className="partners-next-button"></button>
+                        </div>
                     </div>
                 </div>
 

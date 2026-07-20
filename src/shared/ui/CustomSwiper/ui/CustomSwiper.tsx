@@ -20,6 +20,8 @@ export default function CustomSwiper<T>({ swiperConfig, renderSlide, children, s
     if (swiperConfig?.slides)
         return (
             <Swiper
+            onSwiper={() => console.log("Swiper init")}
+    onSlideChange={() => console.log("Slide changed")}
                 modules={modules}
                 className='customSwiper'
                 slidesPerView={swiperConfig?.slidesPerView || 3}
@@ -28,7 +30,7 @@ export default function CustomSwiper<T>({ swiperConfig, renderSlide, children, s
                     swiperConfig?.autoPlay ? swiperConfig?.autoPlay || defaultAutoplayConfig : false
                 }
                 breakpoints={swiperConfig?.breakpoints}
-                spaceBetween={swiperConfig?.spaceBetween || 20} 
+                spaceBetween={swiperConfig?.spaceBetween} 
                 loop={swiperConfig?.loop ?? false}
                 draggable={false}
                 {...swiperProps}
