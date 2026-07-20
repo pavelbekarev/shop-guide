@@ -10,13 +10,13 @@ interface SwiperConfig<T> {
   };
   onSlideChange?: () => void;
   breakpoints?: SwiperOptions["breakpoints"];
-  navigation?: boolean;
   spaceBetween?: number;
+  loop?: boolean;
 }
 
 export interface CustomSwiperProps<T> {
   swiperConfig: SwiperConfig<T>;
   renderSlide: (slide: T, key: number) => React.ReactNode;
   children?: React.ReactNode;
-  swiperProps: SwiperProps;
+  swiperProps?: SwiperProps;
 }
