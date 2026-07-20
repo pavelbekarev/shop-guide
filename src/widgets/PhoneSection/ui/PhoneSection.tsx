@@ -35,8 +35,8 @@ export function PhoneSection() {
                         }
                     </ul>
                     <div className="phoneSection__description">
-                        {phoneSectionMocks[activeIndex].description.map((text) => (
-                            <p>{text}</p>
+                        {phoneSectionMocks[activeIndex].description.map((text, key) => (
+                            <p key={key}>{text}</p>
                         ))}
                     </div>
                 </div>

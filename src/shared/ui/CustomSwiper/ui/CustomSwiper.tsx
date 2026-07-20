@@ -20,8 +20,6 @@ export default function CustomSwiper<T>({ swiperConfig, renderSlide, children, s
     if (swiperConfig?.slides)
         return (
             <Swiper
-            onSwiper={() => console.log("Swiper init")}
-    onSlideChange={() => console.log("Slide changed")}
                 modules={modules}
                 className='customSwiper'
                 slidesPerView={swiperConfig?.slidesPerView || 3}
