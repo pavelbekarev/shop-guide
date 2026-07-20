@@ -152,5 +152,13 @@
     line-height: 20px;
     text-transform: uppercase;
     color: #fff;
+    transition:
+      background-color 0.3s ease-out,
+      box-shadow 0.3s ease-out;
+
+    &:hover {
+      background-color: #03c4c0;
+      box-shadow: 1px 4px 24px 0px rgba(34, 60, 80, 0.35);
+    }
   }
 }
