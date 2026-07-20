@@ -8,10 +8,6 @@ export function PhoneSection() {
     const [activeIndex, setActiveIndex] = useState<number>(0);
     const [swiper, setSwiper] = useState<SwiperType | null>(null)
 
-    useEffect(() => {
-        console.debug(activeIndex)
-    }, [activeIndex])
-
     return (
         <section className="phoneSection">
             <div className="phoneSection__content">

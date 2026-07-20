@@ -5,6 +5,7 @@ import Advantages from "#widgets/Advantages"
 import {PhoneSection} from "#widgets/PhoneSection"
 import Promotion from "#widgets/Promotion"
 import Partners from "#widgets/Partners"
+import Footer from "#widgets/Footer"
 
 export function HomePage() {
     return (
@@ -17,7 +18,7 @@ export function HomePage() {
                 <Promotion />
                 <Partners />
             </main>
-            <footer></footer>
+            <Footer />
         </>
     )
 }

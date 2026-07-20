@@ -1,0 +1,74 @@
+.footer {
+  background: url(/assets/bannerBg.png) bottom / cover;
+  width: 100%;
+  margin-top: 30px;
+
+  &__content {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 43px 0;
+
+    @media (max-width: 570px) {
+      flex-flow: column-reverse;
+      gap: 40px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-flow: column;
+    gap: 11px;
+
+    @media (max-width: 570px) {
+      align-items: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-flow: row;
+    gap: 40px;
+
+    @media (max-width: 570px) {
+      flex-flow: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    letter-spacing: -5%;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #b5b5b5;
+
+    &--light {
+      color: #f6f6f6;
+      text-decoration: none;
+    }
+  }
+
+  &__button {
+    gap: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    letter-spacing: -5%;
+  }
+}
+
+.copyright {
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 400;
+  letter-spacing: -5%;
+  text-transform: uppercase;
+  color: #f6f6f6;
+}
